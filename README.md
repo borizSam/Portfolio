@@ -1,67 +1,43 @@
-<h2 align="center">
-  🌐 Portfolio Personal — v2.0<br/>
-  <a href="https://boriz.dev" target="_blank">boriz.dev</a>
-</h2>
-
-<div align="center">
-  <img alt="Demo" src="./Images/readme-preview.png" width="700"/>
-</div>
-
-<br/>
-
-<center>
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
-![GitHub Repo stars](https://img.shields.io/github/stars/borizSam/Portfolio?color=purple&logo=github&style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/borizSam/Portfolio?color=purple&logo=github&style=for-the-badge)
-
-</center>
-
----
+<h1 align="center">🚀 Portfolio Personal — Boris Huarachi Pérez</h1>
 
 <h3 align="center">
-  💬
-  <a href="https://github.com/borizSam/Portfolio/issues">Reportar un bug</a> &nbsp; • &nbsp;
-  🚀
-  <a href="https://github.com/borizSam/Portfolio/issues">Sugerir una mejora</a>
+💻 DevOps Practitioner | ☁️ Cloud Engineer | 🧠 Lifelong Learner
 </h3>
 
----
-
-## ⚡ Descripción
-
-Mi portfolio personal <a href="https://boriz.dev" target="_blank">boriz.dev</a> presenta mis proyectos, habilidades técnicas, certificaciones y experiencia en **DevOps** y **Cloud Computing** ☁️.  
-Está diseñado con un enfoque **minimalista, animaciones suaves** y una estética inspirada en **el espacio y la automatización**.
+<p align="center">
+  <img src="./src/Assets/Avatar.png" alt="Boris Huarachi Avatar" width="180px" style="border-radius: 50%;"/>
+</p>
 
 ---
 
-## 🧰 Construido con
+## 🧩 Acerca del Proyecto
 
-Este proyecto fue desarrollado utilizando las siguientes tecnologías:
+Este es mi **portfolio personal**, una web desarrollada con **React.js** donde muestro mis proyectos, experiencia y trayectoria en el mundo **DevOps y Cloud**.
 
-- ⚛️ **React.js**
-- 💅 **React-Bootstrap** + CSS personalizado
-- ☁️ **Vercel** (para el despliegue)
-- 🧠 **JavaScript (ES6+)**
-- 🧑‍💻 **VS Code**
+Diseñado para reflejar mi estilo, mi crecimiento y mi enfoque en la automatización, la infraestructura y las tecnologías modernas.  
+
+> "Automatizando ideas, escalando el futuro." 🚀
 
 ---
 
-## ✨ Características
+## 🛠️ Tecnologías Utilizadas
 
-✅ Diseño multi-página  
-✅ Completamente responsivo (desktop, tablet, móvil)  
-✅ Animaciones con partículas y efectos visuales  
-✅ Descarga directa de CV en PDF  
-✅ Integración con redes sociales y GitHub  
-✅ Avatar SVG animado con efecto *scroll parallax*  
+- **Frontend:** React.js, Bootstrap, React-Bootstrap  
+- **Backend:** Node.js (para futuras integraciones)  
+- **DevOps & Cloud:** Docker, AWS ECS, GitHub Actions, Terraform  
+- **Diseño:** Figma, CSS3, animaciones personalizadas  
+- **Control de versiones:** Git, GitHub
 
 ---
 
-## 🚀 Instalación y configuración
+## 📂 Estructura del Proyecto
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/borizSam/Portfolio.git
+```bash
+Portfolio/
+├── src/
+│   ├── components/      # Componentes de React (Home, About, Projects, Resume...)
+│   ├── Assets/          # Imágenes, SVGs y recursos
+│   └── App.js           # Entrada principal
+├── public/              # Archivos estáticos
+├── package.json         # Dependencias del proyecto
+└── README.md            # Este archivo :)
