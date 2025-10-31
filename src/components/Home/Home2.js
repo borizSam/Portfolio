@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 
 function Home2() {
@@ -10,46 +9,42 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              UN POCO <span className="purple"> SOBRE </span> MÍ
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              Soy un <b className="purple">DevOps Practitioner</b> y{" "}
+              <b className="purple">Cloud Engineer</b> apasionado por la
+              automatización, la escalabilidad y el diseño de infraestructuras
+              en la nube eficientes.
               <br />
               <br />
-              I’m proficient in
-              <i>
-                <b className="purple">
-                  {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
-                </b>
-              </i>
-              — and I enjoy working across both backend and frontend stacks.
+              A lo largo del tiempo he trabajado con tecnologías que impulsan
+              los sistemas modernos, desde la{" "}
+              <b className="purple">contenerización</b> hasta la{" "}
+              <b className="purple">integración y entrega continua (CI/CD)</b>.
               <br />
               <br />
-              My key areas of interest include developing
-              <i>
-                <b className="purple">
-                  {" "}
-                  Web Applications, Blockchain Solutions,{" "}
-                </b>
-              </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              Tengo experiencia con{" "}
+              <b className="purple">
+                AWS, Docker, Kubernetes, Jenkins, Bash y Python
+              </b>
+              . Disfruto diseñando entornos seguros, escalables y automatizados
+              que mejoran el desarrollo y despliegue de aplicaciones.
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
-              </i>
+              Mis principales áreas de interés son la{" "}
+              <b className="purple">Arquitectura Cloud</b>, la{" "}
+              <b className="purple">Infraestructura como Código (IaC)</b> y la{" "}
+              <b className="purple">automatización de pipelines CI/CD</b>.
+              <br />
+              <br />
+              Siempre que puedo, me gusta optimizar sistemas con{" "}
+              <b className="purple">AWS</b> y crear soluciones que transformen
+              procesos en la nube ☁️.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
@@ -57,4 +52,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;

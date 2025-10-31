@@ -2,12 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+
+// 🟣 Placeholder online (se muestra mientras no tengas tus capturas)
+const placeholder = "https://via.placeholder.com/500x300.png?text=Project+Preview";
 
 function Projects() {
   return (
@@ -15,76 +12,73 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+           My <strong className="purple">DevOps & Cloud Projects</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Automatizando ideas, escalando el futuro. ☁️
         </p>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          {/* 🧱 Aeropuerto Backend */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={placeholder}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Aeropuerto Backend"
+              description="API REST desarrollada con Spring Boot para la gestión integral de aeropuertos (vuelos, pasajeros y operaciones). Incluye seguridad con JWT, validaciones y base de datos relacional."
+              ghLink="https://github.com/borizSam/Aeropuerto-Backend"
+              tech="Spring Boot · Java · MySQL · JPA · JWT"
             />
           </Col>
 
+          {/* 🖥️ Aeropuerto Frontend */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={placeholder}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Aeropuerto Frontend"
+              description="Interfaz web desarrollada en React para gestionar vuelos, usuarios y operaciones aeroportuarias. Consumo de API REST, UI moderna y panel de administración responsivo."
+              ghLink="https://github.com/borizSam/Aeropuerto-Frontend"
+              demoLink="https://aeropuerto.vercel.app"
+              tech="React · Vite · Axios · TailwindCSS"
             />
           </Col>
 
+          {/* ☁️ Aeropuerto Cloud & CI/CD */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={placeholder}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Aeropuerto Cloud Deployment"
+              description="Pipeline CI/CD con GitHub Actions y Docker para desplegar el sistema de aeropuertos en AWS ECS. Uso de Docker Hub, VPC, Load Balancer y auto-scaling configurado."
+              ghLink="https://github.com/borizSam/Aeropuerto-Infra"
+              tech="AWS ECS · Docker · GitHub Actions · VPC · CloudWatch"
             />
           </Col>
 
+          {/* 📘 RoadMap DevOps */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={placeholder}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="RoadMap DevOps"
+              description="Guía visual y práctica de mi camino hacia Cloud Architect. Creado con Quarto (Markdown avanzado) y desplegado automáticamente mediante CI/CD con GitHub Actions."
+              ghLink="https://github.com/borizSam/RoadMapDevOps"
+              demoLink="https://borizsam.github.io/RoadMapDevOps/"
+              tech="Quarto · GitHub Actions · Markdown · CI/CD"
             />
           </Col>
 
+          {/* ☁️ AWS Re/Start Labs */}
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={placeholder}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="AWS Re/Start Labs"
+              description="Plataforma educativa con laboratorios documentados del programa AWS Re/Start. Usa Quarto y GitHub Actions para despliegue automático en GitHub Pages."
+              ghLink="https://github.com/borizSam/AWS-Re_Start"
+              demoLink="https://borizsam.github.io/AWS-Re_Start/"
+              tech="AWS · Quarto · GitHub Actions · GitHub Pages"
             />
           </Col>
         </Row>
@@ -94,3 +88,5 @@ function Projects() {
 }
 
 export default Projects;
+
+
