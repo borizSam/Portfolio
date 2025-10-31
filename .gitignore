@@ -1,17 +1,17 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# 🔹 Dependencias
 /node_modules
 /.pnp
 .pnp.js
+Server/node_modules
 
-# testing
+# 🔹 Testing
 /coverage
 
-# production
+# 🔹 Producción
 /build
+/dist
 
-# misc
+# 🔹 Archivos temporales o de entorno
 .DS_Store
 .env
 .env.local
@@ -19,11 +19,32 @@
 .env.test.local
 .env.production.local
 
+# 🔹 Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
+# 🔹 Configuraciones de editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🔹 Cache de ESLint
 .eslintcache
 
-Server/node_modules
+# 🔹 Configuraciones locales del servidor
 Server/config.js
+
+# 🔹 Archivos de despliegue
+.vercel
+.netlify
+
+# 🔹 Archivos del sistema
+Thumbs.db
+__MACOSX/
+
+# 🔹 Archivos temporales o de respaldo
+*.tmp
+*.bak
