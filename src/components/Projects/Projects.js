@@ -12,7 +12,7 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-           My <strong className="purple">DevOps & Cloud Projects</strong>
+          My <strong className="purple">DevOps & Cloud Projects</strong>
         </h1>
         <p style={{ color: "white" }}>
           Automatizando ideas, escalando el futuro. ☁️
@@ -21,14 +21,21 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {/* 🧱 Aeropuerto Backend */}
           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Aeropuerto Backend"
-              description="API REST desarrollada con Spring Boot para la gestión integral de aeropuertos (vuelos, pasajeros y operaciones). Incluye seguridad con JWT, validaciones y base de datos relacional."
-              ghLink="https://github.com/borizSam/Aeropuerto-Backend"
-              tech="Spring Boot · Java · MySQL · JPA · JWT"
-            />
+            <a
+              href="https://github.com/borizSam/Aeropuerto-Back"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <ProjectCard
+                imgPath="https://i.imgur.com/l4ktSLG.png" // 🔹 Tu imagen del backend
+                isBlog={false}
+                title="Aeropuerto Backend"
+                description="API REST desarrollada con Spring Boot para la gestión integral de aeropuertos (vuelos, pasajeros y operaciones). Incluye seguridad con JWT, validaciones y base de datos relacional."
+                ghLink="https://github.com/borizSam/Aeropuerto-Back"
+                tech="Spring Boot · Java · MySQL · JPA · JWT"
+              />
+            </a>
           </Col>
 
           {/* 🖥️ Aeropuerto Frontend */}
