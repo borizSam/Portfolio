@@ -1,28 +1,35 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
-import chrome from "../../Assets/TechIcons/Google Chrome.svg";
-import vsCode from "../../Assets/TechIcons/vscode.svg";
-import intelliJ from "../../Assets/TechIcons/intellij-idea.svg";
+import { FaLinux, FaWindows, FaChrome } from "react-icons/fa";
+import { SiVisualstudiocode, SiIntellijidea } from "react-icons/si";
 
 function Toolstack() {
+  const iconStyle = { fontSize: "3em", marginBottom: "1px" };
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={macOs} alt="macOs" className="tech-icon-images" />
-        <div className="tech-icons-text">Mac Os</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={chrome} alt="Chrome" className="tech-icon-images" />
-        <div className="tech-icons-text">Google Chrome</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={vsCode} alt="vsCode" className="tech-icon-images" />
-        <div className="tech-icons-text">Vs Code</div>
+        <FaLinux style={iconStyle} />
+        <div className="tech-icons-text">Linux</div>
       </Col>
 
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={intelliJ} alt="go" className="tech-icon-images" />
+      <Col xs={4} md={2} className="tech-icons">
+        <FaWindows style={iconStyle} />
+        <div className="tech-icons-text">Windows</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <FaChrome style={iconStyle} />
+        <div className="tech-icons-text">Google Chrome</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiVisualstudiocode style={iconStyle} />
+        <div className="tech-icons-text">VS Code</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiIntellijidea style={iconStyle} />
         <div className="tech-icons-text">IntelliJ</div>
       </Col>
     </Row>
@@ -30,3 +37,4 @@ function Toolstack() {
 }
 
 export default Toolstack;
+
