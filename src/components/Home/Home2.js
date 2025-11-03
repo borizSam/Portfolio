@@ -6,12 +6,12 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
+        <Row className="justify-content-center text-center"> {/* centrado horizontal */}
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               UN POCO <span className="purple"> SOBRE </span> MÍ
             </h1>
-            <p className="home-about-body">
+            <p className="home-about-body" style={{ textAlign: "center" }}>
               Soy un <b className="purple">DevOps Practitioner</b> y{" "}
               <b className="purple">Cloud Engineer</b> apasionado por la
               automatización, la escalabilidad y el diseño de infraestructuras
@@ -43,9 +43,8 @@ function Home2() {
               procesos en la nube ☁️.
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
-            <Tilt>
-            </Tilt>
+          <Col md={4} className="myAvtar text-center">
+            <Tilt></Tilt>
           </Col>
         </Row>
       </Container>
