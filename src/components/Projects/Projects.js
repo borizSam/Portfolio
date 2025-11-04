@@ -1,12 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-
-// 🟣 Placeholder online (se muestra mientras no tengas tus capturas)
-const placeholder = "https://via.placeholder.com/500x300.png?text=Project+Preview";
+import "./Projects.css";
 
 function Projects() {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -14,79 +18,113 @@ function Projects() {
         <h1 className="project-heading">
           My <strong className="purple">DevOps & Cloud Projects</strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Automatizando ideas, escalando el futuro. ☁️
-        </p>
+        <p className="project-subtitle">Automatizando ideas, escalando el futuro ☁️</p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {/* 🧱 Aeropuerto Backend */}
           <Col md={4} className="project-card">
-            <a
-              href="https://github.com/borizSam/Aeropuerto-Back"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              whileHover={{ scale: 1.04 }}
             >
               <ProjectCard
-                imgPath="https://i.imgur.com/l4ktSLG.png" // 🔹 Tu imagen del backend
-                isBlog={false}
-                title="Aeropuerto Backend"
+                imgPath="https://i.imgur.com/l4ktSLG.png"
+                title="Aeropuerto Backend – API REST & JWT"
                 description="API REST desarrollada con Spring Boot para la gestión integral de aeropuertos (vuelos, pasajeros y operaciones). Incluye seguridad con JWT, validaciones y base de datos relacional."
                 ghLink="https://github.com/borizSam/Aeropuerto-Back"
                 tech="Spring Boot · Java · MySQL · JPA · JWT"
               />
-            </a>
+            </motion.div>
           </Col>
 
           {/* 🖥️ Aeropuerto Frontend */}
           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Aeropuerto Frontend"
-              description="Interfaz web desarrollada en React para gestionar vuelos, usuarios y operaciones aeroportuarias. Consumo de API REST, UI moderna y panel de administración responsivo."
-              ghLink="https://github.com/borizSam/Aeropuerto-Frontend"
-              demoLink="https://aeropuerto.vercel.app"
-              tech="React · Vite · Axios · TailwindCSS"
-            />
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              whileHover={{ scale: 1.04 }}
+            >
+              <ProjectCard
+                imgPath="https://i.imgur.com/lEwDE5k.png"
+                title="Aeropuerto Frontend – React + Vite SPA"
+                description="Interfaz web desarrollada en React + Vite para la gestión integral de vuelos, aerolíneas y aeropuertos. Se conecta al backend de Spring Boot y ofrece una UI moderna, responsiva y funcional."
+                ghLink="https://github.com/borizSam/Aeropuerto-Front"
+                demoLink="https://aeropuerto.vercel.app"
+                demoText="🌐 Web"
+                tech="React · Vite · TailwindCSS · Axios · Docker"
+              />
+            </motion.div>
           </Col>
 
-          {/* ☁️ Aeropuerto Cloud & CI/CD */}
+          {/* ☁️ Aeropuerto Infraestructura */}
           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="Aeropuerto Cloud Deployment"
-              description="Pipeline CI/CD con GitHub Actions y Docker para desplegar el sistema de aeropuertos en AWS ECS. Uso de Docker Hub, VPC, Load Balancer y auto-scaling configurado."
-              ghLink="https://github.com/borizSam/Aeropuerto-Infra"
-              tech="AWS ECS · Docker · GitHub Actions · VPC · CloudWatch"
-            />
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              whileHover={{ scale: 1.04 }}
+            >
+              <ProjectCard
+                imgPath="https://raw.githubusercontent.com/borizSam/Photos/refs/heads/main/Diagrama.jpg.png"
+                title="Aeropuerto Infra – AWS ECS & CI/CD"
+                description="Automatización completa del despliegue del sistema Aeropuerto en AWS ECS Fargate. Uso de Docker Hub, GitHub Actions y CloudWatch para CI/CD, monitoreo y escalabilidad."
+                ghLink="https://github.com/borizSam/Aeropuerto-infra"
+                tech="AWS ECS · Docker · GitHub Actions · CloudWatch · CI/CD"
+              />
+            </motion.div>
           </Col>
 
           {/* 📘 RoadMap DevOps */}
           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="RoadMap DevOps"
-              description="Guía visual y práctica de mi camino hacia Cloud Architect. Creado con Quarto (Markdown avanzado) y desplegado automáticamente mediante CI/CD con GitHub Actions."
-              ghLink="https://github.com/borizSam/RoadMapDevOps"
-              demoLink="https://borizsam.github.io/RoadMapDevOps/"
-              tech="Quarto · GitHub Actions · Markdown · CI/CD"
-            />
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              whileHover={{ scale: 1.04 }}
+            >
+              <ProjectCard
+                imgPath="https://i.imgur.com/hC8PgU9.png"
+                title="RoadMap DevOps – Learning Journey"
+                description="Guía visual y práctica de mi camino hacia Cloud Architect. Creado con Quarto y desplegado automáticamente mediante CI/CD con GitHub Actions."
+                ghLink="https://github.com/borizSam/RoadMapDevOps"
+                demoLink="https://borizsam.github.io/RoadMapDevOps/"
+                demoText="🌐 Web"
+                tech="Quarto · GitHub Actions · Markdown · CI/CD"
+              />
+            </motion.div>
           </Col>
 
           {/* ☁️ AWS Re/Start Labs */}
           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={placeholder}
-              isBlog={false}
-              title="AWS Re/Start Labs"
-              description="Plataforma educativa con laboratorios documentados del programa AWS Re/Start. Usa Quarto y GitHub Actions para despliegue automático en GitHub Pages."
-              ghLink="https://github.com/borizSam/AWS-Re_Start"
-              demoLink="https://borizsam.github.io/AWS-Re_Start/"
-              tech="AWS · Quarto · GitHub Actions · GitHub Pages"
-            />
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              whileHover={{ scale: 1.04 }}
+            >
+              <ProjectCard
+                imgPath="https://i.imgur.com/QQaKPNX.png"
+                title="AWS Re/Start Labs – Cloud Learning Journey"
+                description="Sitio técnico y educativo creado con Quarto, donde documento mi proceso de aprendizaje en AWS RE/START: fundamentos cloud, Linux, redes, DevOps y laboratorios prácticos. Desplegado automáticamente con GitHub Actions en GitHub Pages."
+                ghLink="https://github.com/borizSam/AWS-Re_Start"
+                demoLink="https://borizsam.github.io/AWS-Re_Start/"
+                demoText="🌐 Web"
+                tech="Quarto · GitHub Pages · GitHub Actions · Markdown · CI/CD"
+              />
+            </motion.div>
           </Col>
         </Row>
       </Container>

@@ -173,18 +173,6 @@ function Resume() {
                 despliegue automático en GitHub Pages.
               </li>
             </ul>
-
-            <p
-              style={{
-                textAlign: "center",
-                marginTop: "50px",
-                fontStyle: "italic",
-                fontSize: "1.2em",
-                color: "#b891ff",
-              }}
-            >
-              “Automatizando ideas, escalando el futuro.” 🚀
-            </p>
           </Col>
         </Row>
       </Container>
