@@ -18,9 +18,30 @@ function Projects() {
         <h1 className="project-heading">
           My <strong className="purple">DevOps & Cloud Projects</strong>
         </h1>
-        <p className="project-subtitle">Automatizando ideas, escalando el futuro ☁️</p>
+        <p className="project-subtitle">
+          Automatizando ideas, escalando el futuro ☁️
+        </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          {/* 🧪 CI/CD Python Validation */}
+          <Col md={4} className="project-card">
+            <motion.div
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+              whileHover={{ scale: 1.04 }}
+            >
+              <ProjectCard
+                imgPath="https://imgur.com/a/bEYa1lY" // puedes cambiarlo luego
+                title="CI/CD Validation Platform – Python"
+                description="Pipeline de integración continua para validar automáticamente software en Python. Ejecuta tests por fases en cada commit (unitarios, integración y rendimiento), genera reportes como artifacts y bloquea cambios no válidos."
+                ghLink="https://github.com/borizSam/ci-cd-python-test-automation"
+                tech="Python · Pytest · GitHub Actions · CI/CD · Bash · Docker"
+              />
+            </motion.div>
+          </Col>
           {/* 🧱 Aeropuerto Backend */}
           <Col md={4} className="project-card">
             <motion.div
@@ -133,5 +154,3 @@ function Projects() {
 }
 
 export default Projects;
-
-
