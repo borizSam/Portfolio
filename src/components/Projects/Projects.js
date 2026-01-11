@@ -34,7 +34,7 @@ function Projects() {
               whileHover={{ scale: 1.04 }}
             >
               <ProjectCard
-                imgPath="https://imgur.com/a/bEYa1lY" // puedes cambiarlo luego
+                imgPath="https://i.imgur.com/nKBfz1L.png"
                 title="CI/CD Validation Platform – Python"
                 description="Pipeline de integración continua para validar automáticamente software en Python. Ejecuta tests por fases en cada commit (unitarios, integración y rendimiento), genera reportes como artifacts y bloquea cambios no válidos."
                 ghLink="https://github.com/borizSam/ci-cd-python-test-automation"
