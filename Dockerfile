@@ -1,27 +1,33 @@
-# Etapa 1: build del frontend
+# =========================
+# Stage 1 - Build React App
+# =========================
 FROM node:18-alpine AS build
+
+# Directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiamos dependencias
+# Copiamos solo package files primero
 COPY package*.json ./
 
-# Instalamos dependencias de forma flexible
-RUN npm install --legacy-peer-deps
+# Instalación reproducible y más rápida para CI/CD
+RUN npm ci
 
 # Copiamos el resto del proyecto
 COPY . .
 
-# Construimos la app optimizada para producción
+# Build optimizado producción
 RUN npm run build
 
-# Etapa 2: servir con NGINX
+# =========================
+# Stage 2 - NGINX Runtime
+# =========================
 FROM nginx:alpine
 
-# Copiamos el build al contenedor final
+# Copiamos build generado
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Exponemos el puerto 80 (Render lo usará automáticamente)
+# Puerto nginx
 EXPOSE 80
 
-# Comando de arranque
+# Mantener nginx foreground
 CMD ["nginx", "-g", "daemon off;"]
