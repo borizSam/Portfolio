@@ -57,6 +57,7 @@ jobs:
             docker rm portfolio-app || true
 
             docker run -d \
+              --restart unless-stopped \
               -p 8080:80 \
               --name portfolio-app \
               137068224793.dkr.ecr.eu-central-1.amazonaws.com/portfolio-app:${{ steps.vars.outputs.TAG }}
