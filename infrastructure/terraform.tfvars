@@ -1,3 +1,3 @@
-ami_id = "ami-0c55b159cbfafe1f0"
-instance_type = "t2.micro"
-server_name = "PortfolioServer"
+ami_id        = "ami-0084a47cc718c111a"
+instance_type = "t3.micro"
+server_name   = "PortfolioServer"

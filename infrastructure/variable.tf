@@ -3,10 +3,10 @@ variable "ami_id" {
   type        = string
 }
 variable "instance_type" {
-    description = "EC2 instance type"
-    type        = string
+  description = "EC2 instance type"
+  type        = string
 }
 variable "server_name" {
-    description = "Name tag EC2-Instance"
-    type        = string
+  description = "Name tag EC2-Instance"
+  type        = string
 }
